@@ -50,6 +50,36 @@ const atribuicaoConsumo = (array) => {
   array.forEach((e) => (e.previsao_consumo = e.quantidade * 5));
   return array;
 };
+/* Teste 01 */
+function compararElementos(a, b) {
+    // Converte a condição de pagamento em uma classificação numérica
+    const condicaoPagamentoRanking = { 'DIN': 5, '30': 4, 'R60': 3, '90': 2, '120': 1 };
+  
+    // Comparação por país (PORT tem prioridade)
+    if (a.pais === "PORT" && b.pais !== "PORT") {
+      return -1;
+    } else if (b.pais === "PORT" && a.pais !== "PORT") {
+      return 1;
+    }
+  
+    // Comparação por quantidade
+    if (a.quantidade > b.quantidade) {
+      return -1;
+    } else if (a.quantidade < b.quantidade) {
+      return 1;
+    }
+  
+    // Comparação por condição de pagamento
+    return (condicaoPagamentoRanking[b.condicao_pagamento] || 0) - (condicaoPagamentoRanking[a.condicao_pagamento] || 0);
+  }
+  
+  app.post('/ordenacao', (req, res) => {
+    let array = req.body;
+    array.sort(compararElementos);
+    array.forEach(elemento => elemento.previsao_consumo = elemento.quantidade * 5);
+    res.status(200).json(array);
+  });
+/* Teste 01 */
 
 // Iniciando o servidor
 const PORT = process.env.PORT || 3000;

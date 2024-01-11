@@ -50,7 +50,7 @@ const atribuicaoConsumo = (array) => {
   array.forEach((e) => (e.previsao_consumo = e.quantidade * 5));
   return array;
 };
-/* Teste 01 */
+/* Teste */
 function compararElementos(a, b) {
     // Converte a condição de pagamento em uma classificação numérica
     const condicaoPagamentoRanking = { 'DIN': 5, '30': 4, 'R60': 3, '90': 2, '120': 1 };
@@ -79,7 +79,7 @@ function compararElementos(a, b) {
     array.forEach(elemento => elemento.previsao_consumo = elemento.quantidade * 5);
     res.status(200).json(array);
   });
-/* Teste 01 */
+/* Teste */
 
 // Iniciando o servidor
 const PORT = process.env.PORT || 3000;

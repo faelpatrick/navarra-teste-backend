@@ -1,0 +1,14 @@
+{
+  "name": "navarra-rafael-souza",
+  "version": "1.0.0",
+  "description": "Teste Rafael Patrick de Souza - Navarra",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafael Patrick de Souza",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

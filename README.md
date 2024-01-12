@@ -1,7 +1,7 @@
 # TESTE FULLSTACK DEVELOPER
 ## Rafael Patrick de Souza
 
-Breve descrição do projeto.
+Este projeto é uma aplicação Node.js desenvolvida como parte do teste para a empresa Navarra. O objetivo é demonstrar competências em operações básicas de backend utilizando Express.js.
 
 ## Estrutura do Projeto
 
@@ -14,6 +14,7 @@ Este projeto possui duas versões principais:
 
 **Opção 1 - MVC**:
 ```bash
+git clone https://github.com/faelpatrick/navarra-teste-backend.git
 npm install
 npm start
 ```
@@ -31,6 +32,18 @@ O projeto define as seguintes rotas:
 - `POST /total-elementos`: Rota que recebe um array JSON e retorna o número total de elementos.
 - `POST /ordenacao`: Rota que recebe um array JSON e retorna os elementos ordenados conforme critérios específicos.
 - `POST /consumir-api`: Rota que faz uma requisição para uma API externa, recebe dados, os ordena e retorna.
+
+## Estrutura do Projeto
+`src/`: Pasta contendo os arquivos-fonte do projeto, organizados conforme a arquitetura MVC.
+`src/server.js`: Ponto de entrada da aplicação.
+`src/controllers/`: Controladores para gerenciar a lógica de negócio.
+`src/routes/`: Definições de rotas da aplicação.
+
+## Tecnologias Utilizadas
+- Node.js
+- Express.js
+- Axios para requisições HTTP
+- Sucrase para suporte a sintaxe moderna do JavaScript
 
 ## Configurações do Servidor
 
